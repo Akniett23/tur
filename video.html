@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+<title>Video Gallery</title>
+<link rel="stylesheet" href="sat.css">
+</head>
+<body>
+<!-- Navbar Start -->
+   <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" id="logo"><span>T</span>ravel</a>
+<div class="container">
+<h1>Сәттер</h1>
+<div class="row">
+<div class="col">
+<div class="feature-img">
+<img src="kaz.jpg" width="100%" >
+<img src="play.png" class="play-btn" onclick="playVideo('qaz.mp4')">
+</div>
+</div>
+<div class="col">
+<div class="small-img-row">
+<div class="small-img">
+<img src="uk.jpg">
+<img src="play.png" class="play-btn" onclick="playVideo('london.mp4')">
+</div>
+<p>Англия<br>Еуропа мемлекеті</p>
+</div>
+<div class="small-img-row">
+<div class="small-img">
+<img src="fr.jpg">
+<img src="play.png" class="play-btn" onclick="playVideo('fran.mp4')">
+</div>
+<p>Франция<br>Еуропа мемлекеті</p>
+</div>
+<div class="small-img-row">
+<div class="small-img">
+<img src="ii.png">
+<img src="play.png" class="play-btn" onclick="playVideo('italy.mp4')">
+</div>
+<p>Италия<br>Еуропа мемлекеті</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="video-player" id="videoPlayer">
+<video width="100%" controls autoplay id="myVideo">
+<source src="qaz.mp4" type="video/mp4">
+</video>
+<img src="close.png" class="close-btn"
+onclick="stopVideo()">
+</div>
+
+<script>
+var videoPlayer = document.getElementById("videoPlayer");
+var myVideo = document.getElementById("myVideo");
+
+function stopVideo(){
+videoPlayer.style.display="none";
+
+}
+
+function playVideo(file){
+myVideo.src=file;
+videoPlayer.style.display="block";
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>
